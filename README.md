@@ -70,6 +70,14 @@ This is also the home of the ASP.NET API versioning API explorers that you can u
   [![Quick Start](https://img.shields.io/badge/quick-start-9B6CD1)](../../wiki/API-Documentation#aspnet-core)
   [![Examples](https://img.shields.io/badge/example-code-2B91AF)](../../tree/main/examples/AspNetCore/WebApi/OpenApiSample)
 
+* **ASP.NET Core with OpenAPI**
+  <div>Adds additional OpenAPI support to your ASP.NET Core applications</div>
+
+  [![NuGet Package](https://img.shields.io/nuget/v/Asp.Versioning.OpenApi.svg)](https://www.nuget.org/packages/Asp.Versioning.OpenApi)
+  [![NuGet Downloads](https://img.shields.io/nuget/dt/Asp.Versioning.OpenApi.svg?color=green)](https://www.nuget.org/packages/Asp.Versioning.OpenApi)
+  [![Quick Start](https://img.shields.io/badge/quick-start-9B6CD1)](../../wiki/API-Documentation#aspnet-core)
+  [![Examples](https://img.shields.io/badge/example-code-2B91AF)](../../tree/main/examples/AspNetCore/WebApi/OpenApiSample)
+
 * **ASP.NET Core with OData API Explorer**
   <div>Adds additional API explorer support to your ASP.NET Core applications using OData v4.0</div>
 
