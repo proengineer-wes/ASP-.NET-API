@@ -5,6 +5,7 @@
   <RootNamespace>Asp.Versioning.OpenApi</RootNamespace>
   <AssemblyTitle>Test API</AssemblyTitle>
   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <SourceFile>$(BaseIntermediateOutputPath)FilePath.g.cs</SourceFile>
  </PropertyGroup>
 
  <ItemGroup>
@@ -12,18 +13,14 @@
  </ItemGroup>
 
  <ItemGroup>
-  <GeneratedFile Include="$(BaseIntermediateOutputPath)FilePath.g.cs" />
- </ItemGroup>
-
- <ItemGroup>
-  <Compile Include="@(GeneratedFile)" Visible="false" />
+  <Compile Include="$(SourceFile)" Condition="Exists('$(SourceFile)')" Link="%(Filename)%(Extension)" Visible="false" />
  </ItemGroup>
 
  <ItemGroup>
    <None Include="Content\**\*.*" CopyToOutputDirectory="Always" />
  </ItemGroup>
 
- <Target Name="GenerateFilePaths" BeforeTargets="Compile" Condition=" '$(DesignTimeBuild)' == 'true' OR '$(BuildingProject)' == 'true' ">
+ <Target Name="GenerateFilePaths" AfterTargets="BeforeBuild">
 
   <ItemGroup>
    <Code Include="namespace $(RootNamespace)%3B" />
@@ -35,7 +32,11 @@
    <Code Include="}" />
   </ItemGroup>
 
-  <WriteLinesToFile File="@(GeneratedFile)" Lines="@(Code)" Overwrite="true" />
+  <WriteLinesToFile File="$(SourceFile)" Lines="@(Code)" Overwrite="true" />
+
+  <ItemGroup>
+   <Compile Include="$(SourceFile)" Visible="false" />
+  </ItemGroup>
 
  </Target>
 
