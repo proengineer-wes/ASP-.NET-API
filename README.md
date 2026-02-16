@@ -70,7 +70,7 @@ This is also the home of the ASP.NET API versioning API explorers that you can u
   [![Quick Start](https://img.shields.io/badge/quick-start-9B6CD1)](../../wiki/API-Documentation#aspnet-core)
   [![Examples](https://img.shields.io/badge/example-code-2B91AF)](../../tree/main/examples/AspNetCore/WebApi/OpenApiSample)
 
-* **ASP.NET Core with OpenAPI**
+* **ASP.NET Core Versioned OpenAPI**
   <div>Adds additional OpenAPI support to your ASP.NET Core applications</div>
 
   [![NuGet Package](https://img.shields.io/nuget/v/Asp.Versioning.OpenApi.svg)](https://www.nuget.org/packages/Asp.Versioning.OpenApi)
